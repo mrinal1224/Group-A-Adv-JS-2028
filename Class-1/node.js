@@ -1,36 +1,32 @@
-'use strict'
+// 'use strict'
 
-
-// browser - non-srict
+// node - non-srict
 
 // This keyword -
 // This refers to the current function execution
 
 // globally
 
-// this.name = "Ayush"
-
 // console.log(this);
 
 // function
 
 // function test() {
-//   this.name = 'Ayush'
-
+//    console.log(this)
 // }
 
 // test();
 
 // object
 
-let obj = {
-  name: "Adam",
-  greet: ()=>{
-    console.log(this)
-  },
-};
+// let obj = {
+//   name: "Adam",
+//   greet: function () {
+//     console.log(this);
+//   },
+// };
 
-obj.greet()
+// obj.greet()
 
 // function inside a method
 // let obj2 = {
@@ -42,13 +38,11 @@ obj.greet()
 //       sayHi();
 //     },
 //   };
-  
+
 //   obj2.greet()
 
-// let random = ()=>{
-//   console.log(this)
-// }
-
-// random()
-
+let random = ()=>{
+    console.log(this)
+  }
   
+random()

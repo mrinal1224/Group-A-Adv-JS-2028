@@ -9,15 +9,6 @@
 
 // function
 
-function test() {
-    this.sayHello = function(){
-      console.log("hello")
-    }
-    console.log(this)
- 
-}
-
-test();
 
 // object
 
@@ -42,3 +33,16 @@ test();
 // };
 
 // obj2.greet()
+
+// Arrow Function 
+
+
+// function test() {
+//   console.log(this)
+
+// }
+// test();
+
+
+
+
