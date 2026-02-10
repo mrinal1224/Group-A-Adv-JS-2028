@@ -51,7 +51,7 @@ pizza2.serve()
 // console.log(pizza4);
 
 // let car = {
-//     name : "Merceded S Class",
+//     name : "Mercedes S Class",
 //     color : 'White'
 // }
 
