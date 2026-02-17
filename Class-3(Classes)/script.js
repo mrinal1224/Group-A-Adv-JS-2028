@@ -1,18 +1,37 @@
 // Classes
 
-
-
 class Pizaa {
+
+   static totalPizza = 0
+   #size
+
+
   constructor(size, toppings, prefrence, crust) {
-    this.size = size;
+    this.#size = size;
     this.toppings = toppings;
     this.preference = prefrence;
     this.crust = crust;
+    Pizaa.totalPizza++
   }
 
-//   serve() {
-//     console.log(`This is a ${this.size} Pizza (normal Pizza)`);
-//   }
+  static showTotalPizza(){
+    console.log(`${Pizaa.totalPizza}`)
+  }
+
+
+  serve() {
+    console.log(`This is a ${this.size} Pizza (normal Pizza)`);
+  }
+
+
+  #describe(){
+    console.log(`Description of the Pizza`)
+  }
+
+
+  test(){
+    this.#describe()
+  }
 }
 
 class StuffedPizza extends Pizaa {
@@ -36,14 +55,38 @@ let pizza2 = new StuffedPizza(
   "Mozarella"
 );
 
+let pizza3 = new StuffedPizza(
+    "Large",
+    ["cheese", "tomato", "Mushrooms"],
+    "Veg",
+    "Thick",
+    "Mozarella"
+  );
+
+  let pizza4 = new StuffedPizza(
+    "Large",
+    ["cheese", "tomato", "Mushrooms"],
+    "Veg",
+    "Thick",
+    "Mozarella"
+  );
+
 console.log(pizza1);
 console.log(pizza2)
- pizza2.serve(); 
+ pizza2.test(); 
+
+ Pizaa.showTotalPizza()
 
 // Classical Inheritance - Not present in JS
 // Prototypal Inheritance
 
-// Encapuslation
+
+
+
+
+
+
+
 // abstraction
 
 // Polymorphism
