@@ -1,4 +1,7 @@
 // Classes
+
+
+
 class Pizaa {
   constructor(size, toppings, prefrence, crust) {
     this.size = size;
@@ -7,9 +10,9 @@ class Pizaa {
     this.crust = crust;
   }
 
-  serve() {
-    console.log(`This is a ${this.size} Pizza`);
-  }
+//   serve() {
+//     console.log(`This is a ${this.size} Pizza (normal Pizza)`);
+//   }
 }
 
 class StuffedPizza extends Pizaa {
@@ -17,6 +20,10 @@ class StuffedPizza extends Pizaa {
     super(size, toppings, prefrence, crust);
     this.stuffing = stuffing;
   }
+
+//   serve(){
+//     console.log(`This is a ${this.size} Pizza  (stuffed)`);
+//   }
 }
 
 let pizza1 = new Pizaa("Medium", ["cheese", "tomato"], "Veg", "Thin");
@@ -31,7 +38,7 @@ let pizza2 = new StuffedPizza(
 
 console.log(pizza1);
 console.log(pizza2)
-// pizza1.serve(); //
+ pizza2.serve(); 
 
 // Classical Inheritance - Not present in JS
 // Prototypal Inheritance
@@ -40,3 +47,6 @@ console.log(pizza2)
 // abstraction
 
 // Polymorphism
+
+
+
