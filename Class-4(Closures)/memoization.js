@@ -13,3 +13,4 @@ function MemoizedAdd() {
 const add = MemoizedAdd()
 console.log(add(5))
 console.log(add(6))
+console.log(add(6))// the value will be from cache
