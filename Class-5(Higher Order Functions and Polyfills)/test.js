@@ -19,17 +19,34 @@
 
 Array.prototype.myMap = function (callback) {
   // this -> working array
+  // callback should be a function
 
-  let results = [];
-
-  for (let i = 0; i < this.length; i++) {
-    results.push(callback(this[i]));
+  if(this==null || this==undefined){
+    throw new Error(`No array Found`)
   }
 
-  return results;
+  if (Array.isArray(this)) {
+    if (typeof callback !== "function") {
+      throw new Error(`The callback is not a function`);
+    }
+
+    let results = [];
+
+    for (let i = 0; i < this.length; i++) {
+      results.push(callback(this[i]));
+    }
+
+    return results;
+  }
+
+  else{
+     throw new Error(`No array Found`)
+  }
 };
 
-let nums = [1, 2, 3, 4, 5];
+let nums = [];
+
+
 
 let ans = nums.myMap(function (num) {
   return num * num;
