@@ -1,6 +1,6 @@
 // What is the call method?
 
-
+console.log(globalThis)
 
 
 
@@ -12,6 +12,9 @@
 // Polyfill for call method
 
 Function.prototype.myCall = function (context, ...args) {
+
+    context = context || globalThis
+     
     // this -> sayHello
     // context -> obj2
     context.tempFn = this;
@@ -36,6 +39,6 @@ let obj2 = {
 
 
 
+// console.log(typeof null)
 
-
-obj1.sayHello.myCall(obj2 , 'Mumbai' , 'India'); 
+obj1.sayHello.myCall(undefined, 'Mumbai' , 'India'); 
