@@ -72,3 +72,7 @@ function fetchUserComments() {
     console.log(err);
   });
 
+//   write theri Polyfills
+
+// allSettled , any 
+// we will create or construct our own Promise
