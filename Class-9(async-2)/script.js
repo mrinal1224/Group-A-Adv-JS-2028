@@ -66,7 +66,7 @@ function fetchUserComments() {
 
   Promise.allSettled([fetchUserData(),fetchUserPosts() , fetchUserComments()])
   .then(function (results) {
-    console.log(results[0].value);
+    console.log(results);
   })
   .catch(function (err) {
     console.log(err);
